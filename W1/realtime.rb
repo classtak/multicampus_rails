@@ -1,9 +1,8 @@
 # gem을 사용하기 위해 불러온다.
-# 요청을 보내기 위한 httparty
-require 'httparty'
 # 원하는 정보를 가져오기 위한 nokogiri
 require 'nokogiri'
 # httparty에서 https를 요청할 수 없어서 사용하는 Gem
+# git bash 에서 gem install rest-client 해주세요!
 require 'rest-client'
 
 # 1.실시간 검색어 링크
