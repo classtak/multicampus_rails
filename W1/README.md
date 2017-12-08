@@ -1,6 +1,6 @@
 ## 1주차 강의 정리
 
-* Ruby 
+* Ruby
   * 사용하는 버전 : 2.3.3
   * [Ruby 공식 문서](http://ruby-doc.org/core-2.3.3/)
   * [Ruby 로컬 설치 가이드라인](http://bit.do/multi_install)
@@ -49,6 +49,9 @@
 
 ### 네이버 주식 정보 크롤링
 
+> 만약에 ssl 오류가 생기면 사용하는 잼은 rest-client*
+> W1 폴더의 realtime.rb 참고하세요!
+
 * 실습코드(naver.rb)
 
   ```ruby
@@ -72,8 +75,7 @@
 
   ```
 
-  * 사용한 gem 들
+* 사용한 gem 들
 
-    [nokogiri](https://github.com/sparklemotion/nokogiri)
-
-    [nokogiri gem link](https://github.com/sparklemotion/nokogiri)
+  [nokogiri 공식 문서](https://github.com/sparklemotion/nokogiri)
+  [httparty 공식 문서](https://github.com/jnunemaker/httparty)
