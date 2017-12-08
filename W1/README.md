@@ -30,7 +30,7 @@
 
 5. 파일들을 원격저장소에 보내겠다.
 
-  `$ git push origin master`
+  `$ git push -u origin master`
 
 #### 파일을 수정한 후에 올릴 때
 1. 해당 폴더 내에 있는 모든 파일들의 변경 사항을 기록하겠다.
