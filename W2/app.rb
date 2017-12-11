@@ -30,5 +30,6 @@ get '/google' do
 end
 get '/search' do
   @q = params[:q]
+  @name = params[:name]
   erb :search
 end
