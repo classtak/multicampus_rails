@@ -7,8 +7,10 @@
 * [Ruby Hash]
 
 #### sinatra
-[sinatra 공식 홈페이지 - 한국어]("http://sinatrarb.com/intro-ko.html")
-sinatra 시작하기
+[sinatra 공식 홈페이지 - 한국어](http://sinatrarb.com/intro-ko.html)
+
+###### sinatra 시작하기
+
 `$ gem install sinatra`
 
 ```Ruby
