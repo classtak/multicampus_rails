@@ -1,6 +1,10 @@
 ## 2주차 정리 내용
 
-#### Ruby 도움되는 자료
+#### Ruby 꼭 읽어야하는 자료!
+* [코드에는 스타일가이드가 있다. ruby 편]
+* [Ruby String]
+* [Ruby Array]
+* [Ruby Hash]
 
 #### sinatra
 [sinatra 공식 홈페이지 - 한국어]("http://sinatrarb.com/intro-ko.html")
@@ -84,3 +88,9 @@ end
 <!-- search.erb -->
 <%= @q %> 검색했지!
 ```
+
+[코드에는 스타일가이드가 있다. ruby 편]: https://github.com/github/rubocop-github/blob/master/STYLEGUIDE.md
+[Ruby String]: https://ruby-doc.org/core-2.3.3/String.html
+[Ruby Array]: https://ruby-doc.org/core-2.3.3/Array.html
+[Ruby Hash]: https://ruby-doc.org/core-2.3.3/Array.html
+
