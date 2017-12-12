@@ -1,0 +1,4 @@
+<h2> <%=@username%>의 instgram 사진들이다! 가져오기 </h2>
+<% @image_urls.uniq!.each do |url| %>
+  <img src="<%= url %>">
+<% end %>
