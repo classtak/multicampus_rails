@@ -9,17 +9,33 @@
       body {height: 2000px;}
       table, tr, td {border: 1px solid black;
       background-color: red;}
+      p {color: green;}     /* 선택자 : 모든 태그를 선택합니다. */
+      #red {color: red;}   /* 선택자 : id는 #으로 선택합니다. */
+      .blue {color: blue;} /* 선택자 : class는 .으로 선택합니다. */
     </style>
   </head>
   <body>
+    <p id="red" class="blue">빨간색일거야</p>
+    <p class="blue">파란색이겠지</p>
+    <p>초록색일거야</p>
+    <form action="/lotto">
+      <input type="text" name="hi" value="안녕" />
+      <input type="password" name="pwd" />
+      <input type="email" name="email" />
+      <input type="radio" name="radio_data" value="남" /> 남
+      <input type="radio" name="radio_data" value="여" /> 여
+      <input type="checkbox" name="check_data" value="남" /> 남
+      <input type="checkbox" name="check_data" value="여" /> 여
+      <input type="submit" value="뿅!!" />
+    </form>
     <a href="https://www.w3schools.com/html/">w3스쿨 학습하는 곳</a>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png" alt="html" width="100px" height="100px"/>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rRzxEiBLQCA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
     <h1>h1</h1>
-    <h2>h2</h2>
+    <h2 class="blue">h2</h2>
     <h3>h3</h3>
     <h4>h4</h4>
-    <h5>h5</h5>
+    <h5 class="blue">h5</h5>
     <h6>h6</h6>
     <p>p</p>
     <ul>
