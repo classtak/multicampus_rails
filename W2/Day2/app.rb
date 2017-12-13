@@ -7,12 +7,20 @@ require 'date'
 require 'nokogiri'
 require 'httparty'
 require 'uri'
+#before 활용해서 파라미터 디버깅
+before do
+  p "****************************************"
+  p params
+  p "****************************************"
+end
 
 get '/vote' do
   erb :vote
 end
 
 get '/result' do
+  # views/result.erb @p를 찍어서 파라미터 디버깅
+  @p = params.inspect
   @count = params[:count]
   erb :result
 end
