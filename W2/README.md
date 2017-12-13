@@ -92,3 +92,30 @@ end
 #### form 데이터를 활용하기
 
 # 여기부터는 여러분이!
+
+
+
+#### csv 활용하기
+
+저장하기
+
+> windows에서 발생하는 cp949 인코딩 에러를 방지하기 위해 utf-8 옵션을 추가한다.
+
+```ruby
+require 'csv'
+CSV.open('csv파일명', 'a+:utf-8') do |csv|
+  csv << [var1, var2,...]
+end
+```
+
+읽어오기
+
+> windows에서 발생하는 cp949 인코딩 에러를 방지하기 위해 encoding: 'utf-8' 옵션을 추가한다.
+
+```ruby
+require 'csv'
+@users = []
+CSV.foreach('csv파일명',encoding: 'utf-8') do |row|
+  @users << row
+end
+```

@@ -48,7 +48,7 @@ get '/welcome/:name' do
   @name = params[:name]
   @time = Time.now.to_s
   # CSV는 require 'csv'
-  CSV.open("user.csv", "a+") do |csv|
+  CSV.open("user.csv", "a+:utf-8") do |csv|
     # Time.now를 쓰려면 require 'date'
     csv << [@name.to_s, @time]
   end
@@ -57,7 +57,7 @@ end
 
 get '/users' do
   @users = []
-  CSV.foreach('user.csv') do |row|
+  CSV.foreach('user.csv',encoding: 'utf-8') do |row|
     @users << row
   end
   erb :users
