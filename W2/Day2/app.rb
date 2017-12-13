@@ -11,6 +11,9 @@ require 'uri'
 before do
   p "****************************************"
   p params
+  p request.path_info
+  p request.fullpath
+  p request.url
   p "****************************************"
 end
 
