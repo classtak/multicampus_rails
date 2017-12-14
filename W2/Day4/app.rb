@@ -1,7 +1,23 @@
 require 'sinatra'
 require 'sinatra/reloader'
 # 가상환경에서 쓰이는 것
+require 'data_mapper'
+DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/blog.db")
+class Post
+  include DataMapper::Resource
+  property :id, Serial
+  property :title, String
+  property :content, Text
+  property :created_at, DateTime
+end
+# Perform basic sanity checks and initialize all relationships
+# Call this when you've defined all your models
+DataMapper.finalize
+# automatically create the post table
+Post.auto_upgrade!
+
 set :bind, '0.0.0.0'
+
 before do
   p "*********************************"
   p params
@@ -9,6 +25,7 @@ before do
 end
 
 get '/' do
+  @posts = Post.all.reverse
   erb :index
 end
 
@@ -20,5 +37,7 @@ end
 get '/complete' do
   @title = params[:title]
   @content = params[:content]
+  Post.create(:title => @title,
+    :content => @content)
   erb :complete
 end
