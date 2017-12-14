@@ -10,11 +10,19 @@ class Post
   property :content, Text
   property :created_at, DateTime
 end
+class User
+  include DataMapper::Resource
+  property :id, Serial
+  property :email, String
+  property :pwd, Text
+  property :created_at, DateTime
+end
 # Perform basic sanity checks and initialize all relationships
 # Call this when you've defined all your models
 DataMapper.finalize
 # automatically create the post table
 Post.auto_upgrade!
+User.auto_upgrade!
 
 set :bind, '0.0.0.0'
 
@@ -37,7 +45,23 @@ end
 get '/complete' do
   @title = params[:title]
   @content = params[:content]
-  Post.create(:title => @title,
-    :content => @content)
+  Post.create(:title => @title, :content => @content)
+  # Post.create(title: @title, content: @content)
   erb :complete
+end
+
+get '/signup' do
+  erb :signup
+end
+
+get '/usercomplete' do
+  @email = params[:email]
+  @pwd = params[:pwd]
+  User.create(:email => @email, :pwd => @pwd )
+  erb :usercomplete
+end
+
+get '/users' do
+  @users = User.all
+  erb :users
 end
