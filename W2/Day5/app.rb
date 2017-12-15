@@ -52,3 +52,13 @@ get '/create' do #어제의 /complete
   # erb :create
   redirect '/'
 end
+
+get '/posts/:id' do
+  @post = Post.get(params[:id])
+  erb :posts
+end
+
+get '/welcome/:name' do
+  @name = params[:name]
+  erb :welcome
+end
