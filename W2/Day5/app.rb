@@ -64,9 +64,9 @@ end
 
 # CRUD - 'D' ; destroy
 get '/destroy/:id' do
-  @post = Post.get(params[:id])
+  post = Post.get(params[:id])
   # 해당하는 데이터를 지워줘!
-  @post.destroy
+  post.destroy
   redirect '/'
 end
 
@@ -79,8 +79,8 @@ end
 
 # 2. 실제로 db에 저장
 get '/update/:id' do
-  @post = Post.get(params[:id])
-  @post.update(:title => params[:title],
+  post = Post.get(params[:id])
+  post.update(:title => params[:title],
   :content => params[:content])
   redirect '/'
 end
