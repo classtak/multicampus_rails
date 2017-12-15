@@ -13,7 +13,10 @@
     <p><%= p.title %></p>
     <p><%= p.content %></p>
     <p><%= p.created_at %></p>
-    <a href="/posts/<%= p.id %>"> 글 보러가기</a>
+    <!-- /posts/1 -->
+    <!-- /posts/2 ... -->
+    <p><a href="/posts/<%= p.id %>"> 글 보러가기</a></p>
+    <p><a href="/destroy/<%= p.id %>">[x]</a></p>
     <hr />
   <% end %>
 </body>

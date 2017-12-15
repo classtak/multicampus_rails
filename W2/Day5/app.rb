@@ -38,6 +38,7 @@ get '/new' do #어제의 /post
 end
 
 # 게시글을 만드는 곳 (db에 저장하는 곳)
+# CRUD - 'C' : Create
 get '/create' do #어제의 /complete
   # form에서 params hash가 넘어온다.
   # input/textarea에 **name**으로 설정된 것.
@@ -53,9 +54,19 @@ get '/create' do #어제의 /complete
   redirect '/'
 end
 
+# variable routing : 주소를 통해 변수를 받는 것.
+# CRUD - 'R' ; Read
 get '/posts/:id' do
+  # Post.get(id) ; id가 일치하는 데이터를 가지고 온다.
   @post = Post.get(params[:id])
   erb :posts
+end
+
+get '/destroy/:id' do
+  @post = Post.get(params[:id])
+  # 해당하는 데이터를 지워줘!
+  @post.destroy
+  redirect '/'
 end
 
 get '/welcome/:name' do
