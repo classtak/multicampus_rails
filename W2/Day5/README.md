@@ -34,6 +34,15 @@ irb(main):008:0> Post.first(:title => "수정")
 
 `Post.create(:컬럼명1 => "내용", :컬럼명2 => "내용")`
 
+위의 코드는 아래의 코드와 같다.
+
+```ruby
+  post = Post.new
+  post.title = "제목입니다."
+  post.content = "내용이지롱"
+  post.save
+```
+
 ```console
 irb(main):002:0> Post.create(:title => "제목이냐", :content => "내용이다.")
 => #<Post @id=11 @title="제목이냐" @content="내용이다." @created_at=#<DateTime: 2017-12-15T05:56:36+00:00 ((2458103j,21396s,233720457n),+0s,2299161j)>>

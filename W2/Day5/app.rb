@@ -4,6 +4,10 @@ require 'data_mapper'
 # 가상환경에서 localhost 사용하기 위한 설정
 set :bind, '0.0.0.0'
 
+before do
+  p params
+end
+
 # DataMapper를 사용하는데, db 파일을 현재 경로에 blog.db라고 저장하겠다.
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/blog.db")
 # Post라는 클래스를 만들고, db(table)을 만든다.
