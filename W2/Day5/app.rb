@@ -62,10 +62,26 @@ get '/posts/:id' do
   erb :posts
 end
 
+# CRUD - 'D' ; destroy
 get '/destroy/:id' do
   @post = Post.get(params[:id])
   # 해당하는 데이터를 지워줘!
   @post.destroy
+  redirect '/'
+end
+
+# CRUD - 'U'
+# 1. 사용자에게 form을 입력받는 창
+get '/edit/:id' do
+  @post = Post.get(params[:id])
+  erb :edit
+end
+
+# 2. 실제로 db에 저장
+get '/update/:id' do
+  @post = Post.get(params[:id])
+  @post.update(:title => params[:title],
+  :content => params[:content])
   redirect '/'
 end
 
