@@ -15,4 +15,12 @@ class HomeController < ApplicationController
   def welcome
     @name = params[:name]
   end
+
+  def square
+    @num = params[:num]
+  end
+
+  def lunch
+    @lunch = ["20층", "이자까야", "김밥카페"].sample
+  end
 end

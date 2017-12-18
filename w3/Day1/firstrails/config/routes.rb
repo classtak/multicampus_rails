@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   # http://localhost:3000/lotto 요청이 들어오면,
   # home 컨트롤러의 lotto 액션에 보내줘.
   get '/lotto' => 'home#lotto'
-
   get '/welcome/:name' => 'home#welcome'
-
+  get '/square/:num' => 'home#square'
+  get '/lunch' => 'home#lunch'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
