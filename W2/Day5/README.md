@@ -98,3 +98,24 @@ irb(main):017:0> irb(main):014:0> Post.all
 irb(main):011:0> Post.first(:title => "수정")
 => #<Post @id=10 @title="수정" @content=<not loaded> @created_at=#<DateTime: 2017-12-15T04:28:13+00:00 ((2458103j,16093s,0n),+0s,2299161j)>>
 ```
+
+
+#### rails 설치 코드
+
+```console
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+```console
+gem install rails -v 4.2.9
+```
+
+```console
+rbenv rehash
+```
+
+```console
+rails -v
+# Rails 4.2.9
+```
