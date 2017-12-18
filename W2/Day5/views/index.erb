@@ -1,24 +1,15 @@
-<!Doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>블로그</title>
-</head>
-<body>
-  <h2>블로그에 온 걸 환영해~</h2>
-  <a href="/new"> 글 써줘....</a>
+<h2>블로그에 온 걸 환영해~</h2>
+<a href="/new"> 글 써줘....</a>
+<hr />
+<% @posts.each do |p| %>
+  <p><%= p.id %> </p>
+  <p><%= p.title %></p>
+  <p><%= p.content %></p>
+  <p><%= p.created_at %></p>
+  <!-- /posts/1 -->
+  <!-- /posts/2 ... -->
+  <p><a href="/posts/<%= p.id %>"> 글 보러가기</a></p>
+  <p><a href="/destroy/<%= p.id %>">[x]</a></p>
+  <p><a href="/edit/<%= p.id %>">수정하러 가기</a></p>
   <hr />
-  <% @posts.each do |p| %>
-    <p><%= p.id %> </p>
-    <p><%= p.title %></p>
-    <p><%= p.content %></p>
-    <p><%= p.created_at %></p>
-    <!-- /posts/1 -->
-    <!-- /posts/2 ... -->
-    <p><a href="/posts/<%= p.id %>"> 글 보러가기</a></p>
-    <p><a href="/destroy/<%= p.id %>">[x]</a></p>
-    <p><a href="/edit/<%= p.id %>">수정하러 가기</a></p>
-    <hr />
-  <% end %>
-</body>
-</html>
+<% end %>
