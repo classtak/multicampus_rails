@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get '/welcome/:name' => 'home#welcome'
   get '/square/:num' => 'home#square'
   get '/lunch' => 'home#lunch'
+  get '/google' => 'home#google'
+  get '/vote' => 'home#vote'
+  get '/result' => 'home#result'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

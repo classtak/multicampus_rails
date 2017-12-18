@@ -23,4 +23,14 @@ class HomeController < ApplicationController
   def lunch
     @lunch = ["20층", "이자까야", "김밥카페"].sample
   end
+
+  def google
+  end
+
+  def vote
+  end
+
+  def result
+    @vote = params[:vote]
+  end
 end
