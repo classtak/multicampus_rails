@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/google' => 'home#google'
   get '/vote' => 'home#vote'
   get '/result' => 'home#result'
+  get '/random' => 'home#random'
+  get '/random_complete' => 'home#rc'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
