@@ -1,0 +1,11 @@
+<h2>게시판입니다.</h2>
+<p><a href="/post/new">글쓰기</a></p>
+<hr />
+<% @posts.each do |post| %>
+  <p> <%= post.id %> </p>
+  <p> <%= post.username %> </p>
+  <p> <%= post.title %> </p>
+  <p> <%= post.content %> </p>
+  <p> <%= post.created_at %> </p>
+  <hr />
+<% end %>
