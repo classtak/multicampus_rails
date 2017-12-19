@@ -13,6 +13,10 @@ class PostController < ApplicationController
     Post.create(:username => params[:username],
               :title => params[:title],
               :content => params[:content])
+    # 1-1번 방법
+    # Post.create(username: params[:username],
+    #           title: params[:title],
+    #           content: params[:content])
     # 2번 방법
     # post = Post.new
     # post.username = params[:username]
