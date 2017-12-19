@@ -14,11 +14,11 @@ class PostController < ApplicationController
               :title => params[:title],
               :content => params[:content])
     # 2번 방법
-    post = Post.new
-    post.username = params[:username]
-    post.title = params[:title]
-    post.content = params[:content]
-    post.save
+    # post = Post.new
+    # post.username = params[:username]
+    # post.title = params[:title]
+    # post.content = params[:content]
+    # post.save
 
     redirect_to '/'
   end
